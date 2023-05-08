@@ -1,7 +1,11 @@
 /*
-Connect row pins of Keypad to analog A5,A4,A3,A2 and column pins to digital 10,11,12,13
-Connect 8 pins of 7 segment to digital 2,3,4,5,6,7,8,9 (A-H = 2-7)
-Connect one of the common anode pin to Vin or 5v or 3.3v
+DESCRIPTION:
+  Press a key on the 4x4 keypad and it will be displayed on Serial Monitor and on 7 segment display.
+-------------------------------------------------------------------------------------------------------------
+SETUP:
+  Connect row pins of Keypad to analog A5,A4,A3,A2 and column pins to digital 10,11,12,13.
+  Connect 8 pins of 7 segment to digital 2,3,4,5,6,7,8,9 (A-H = 2-7).
+  Connect one of the common anode pin to Vin or 5v or 3.3v.
 */
 
 #include<Keypad.h>

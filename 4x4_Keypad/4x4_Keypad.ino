@@ -9,7 +9,7 @@ all inputs and declarations are only character datatype
 const char ROWS = 4;
 const char COLS = 4;
 
-char efgh[ROWS][COLS] = {
+char allKeys[ROWS][COLS] = {
   {'1','2','3','A'},
   {'4','5','6','B'},
   {'7','8','9','C'},
@@ -19,14 +19,14 @@ char efgh[ROWS][COLS] = {
 char rowPins[ROWS] =  {2,3,4,5};
 char colPins[COLS] =  {6,7,8,9};
 
-Keypad abcd = Keypad(makeKeymap(efgh), rowPins, colPins, ROWS, COLS);
+Keypad keypad = Keypad(makeKeymap(allKeys), rowPins, colPins, ROWS, COLS);
 
 void setup(){
   Serial.begin(9600);
 }
 
 void loop(){
-  char keyPressed = abcd.getKey();
+  char keyPressed = keypad.getKey();
   if(keyPressed){
     Serial.println(keyPressed);
   }
